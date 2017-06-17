@@ -27,23 +27,34 @@ gulp.task('lint:sass',	function()	{
 });
 
 
-gulp.task('sass',	function()	{
-    return	gulp.src('src/sass/*.scss')
+gulp.task('sass', function () {
+    return gulp.src('src/scss/**/*.scss')
+        // pass custom title to gulp-plumber error handler function
+        .pipe(customPlumber('Error Running	Sass'))
+        //	Initialize	sourcemap
+        .pipe(plugins.sourcemaps.init())
+        .pipe(plugins.sass())
+        //	Writing	sourcemaps
+        .pipe(plugins.sourcemaps.write())
+        .pipe(gulp.dest('src/css'));
+});
+
+gulp.task('sass:watch', function () {
+    gulp.watch('src/scss/**/*.scss', ['sass']);
+});
+
+gulp.task('sass:vendor',	function()	{
+    return	gulp.src('vendor/**/*.scss')
     // pass custom title to gulp-plumber error handler function
         .pipe(customPlumber('Error Running	Sass'))
         //	Initialize	sourcemap
         .pipe(plugins.sourcemaps.init())
         .pipe(plugins.sass())
         //	Runs	produced	CSS	through	autoprefixer
-        .pipe(plugins.autoprefixer())
+        // .pipe(plugins.autoprefixer())
         //	Writing	sourcemaps
         .pipe(plugins.sourcemaps.write())
         .pipe(gulp.dest('src/css'))
-        //	Tells	Browser	Sync	to	reload	files	task	is	done
-        // browserSync not loaded by load-plugins
-        .pipe(browserSync.reload({
-            stream:	true
-        }))
 });
 
 gulp.task('concatCss', function () {
@@ -58,4 +69,17 @@ gulp.task('min-css', function() {
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('dist'));
 });
+
+
+// Utility functions
+
+function	customPlumber(errTitle)	{
+    return	plugins.plumber({
+        errorHandler:	plugins.notify.onError({
+            //	Customizing	error	title
+            title:	errTitle	||	"Error	running	Gulp",
+            message:	"Error:	<%=	error.message	%>"
+        })
+    });
+}
 

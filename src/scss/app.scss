@@ -1,0 +1,83 @@
+// 1 - Load project variables.
+// 2 - Load bootstrap sass files.
+// 3 - Load custom app sass files.
+
+// --------------------------------------------------------
+//  Import in the default bootstrap variables.
+//  Then override bootstrap default with project specific values.
+// --------------------------------------------------------
+
+// seems custom must come first
+// https://stackoverflow.com/questions/44509331/my-custom-scss-file-is-not-taken-into-account-in-bootstrap-4-alpha-6
+@import "../vendor/bootstrap4-alpha6/scss/variables";
+@import "variables";
+
+// --------------------------------------------------------
+// Import required bootstrap sass files needed for this project.
+// Uncomment any bootstrap functionality required for this project.
+// The idea is to keep this as small as possible.
+// --------------------------------------------------------*/
+
+/*!
+ * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
+ * Copyright 2011-2017 The Bootstrap Authors
+ * Copyright 2011-2017 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+// Core variables and mixins
+// vars imported above so can be overridden by local vars in order
+//@import "variables";
+@import "../vendor/bootstrap4-alpha6/scss/mixins";
+@import "../vendor/bootstrap4-alpha6/scss/custom";
+
+// Reset and dependencies
+@import "../vendor/bootstrap4-alpha6/scss/normalize";
+@import "../vendor/bootstrap4-alpha6/scss/print";
+
+// Core CSS
+@import "../vendor/bootstrap4-alpha6/scss/reboot";
+@import "../vendor/bootstrap4-alpha6/scss/type";
+@import "../vendor/bootstrap4-alpha6/scss/images";
+@import "../vendor/bootstrap4-alpha6/scss/code";
+@import "../vendor/bootstrap4-alpha6/scss/grid";
+@import "../vendor/bootstrap4-alpha6/scss/tables";
+@import "../vendor/bootstrap4-alpha6/scss/forms";
+@import "../vendor/bootstrap4-alpha6/scss/buttons";
+
+// Components
+@import "../vendor/bootstrap4-alpha6/scss/transitions";
+@import "../vendor/bootstrap4-alpha6/scss/dropdown";
+@import "../vendor/bootstrap4-alpha6/scss/button-group";
+@import "../vendor/bootstrap4-alpha6/scss/input-group";
+@import "../vendor/bootstrap4-alpha6/scss/custom-forms";
+@import "../vendor/bootstrap4-alpha6/scss/nav";
+@import "../vendor/bootstrap4-alpha6/scss/navbar";
+@import "../vendor/bootstrap4-alpha6/scss/card";
+@import "../vendor/bootstrap4-alpha6/scss/breadcrumb";
+@import "../vendor/bootstrap4-alpha6/scss/pagination";
+@import "../vendor/bootstrap4-alpha6/scss/badge";
+@import "../vendor/bootstrap4-alpha6/scss/jumbotron";
+@import "../vendor/bootstrap4-alpha6/scss/alert";
+@import "../vendor/bootstrap4-alpha6/scss/progress";
+@import "../vendor/bootstrap4-alpha6/scss/media";
+@import "../vendor/bootstrap4-alpha6/scss/list-group";
+@import "../vendor/bootstrap4-alpha6/scss/responsive-embed";
+@import "../vendor/bootstrap4-alpha6/scss/close";
+
+// Components w/ JavaScript
+@import "../vendor/bootstrap4-alpha6/scss/modal";
+@import "../vendor/bootstrap4-alpha6/scss/tooltip";
+@import "../vendor/bootstrap4-alpha6/scss/popover";
+@import "../vendor/bootstrap4-alpha6/scss/carousel";
+
+// Utility classes
+@import "../vendor/bootstrap4-alpha6/scss/utilities";
+
+
+/* --------------------------------------------------------
+   Custom application specific styles
+   this is instead of _custom in bs4-a6
+   -------------------------------------------------------- */
+
+@import "custom";
