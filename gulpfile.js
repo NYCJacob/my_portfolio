@@ -34,6 +34,10 @@ gulp.task('sass', function () {
         //	Initialize	sourcemap
         .pipe(plugins.sourcemaps.init())
         .pipe(plugins.sass())
+        // remove unused css
+        //TODO: .pipe(purify(['./public/app/**/*.js', './public/**/*.html']))
+        //	Runs	produced	CSS	through	autoprefixer
+        .pipe(plugins.autoprefixer())
         //	Writing	sourcemaps
         .pipe(plugins.sourcemaps.write())
         .pipe(gulp.dest('src/css'));

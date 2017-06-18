@@ -39,10 +39,10 @@
 @import "../vendor/bootstrap4-alpha6/scss/reboot";
 @import "../vendor/bootstrap4-alpha6/scss/type";
 @import "../vendor/bootstrap4-alpha6/scss/images";
-@import "../vendor/bootstrap4-alpha6/scss/code";
+//@import "../vendor/bootstrap4-alpha6/scss/code";
 @import "../vendor/bootstrap4-alpha6/scss/grid";
-@import "../vendor/bootstrap4-alpha6/scss/tables";
-@import "../vendor/bootstrap4-alpha6/scss/forms";
+//@import "../vendor/bootstrap4-alpha6/scss/tables";
+//@import "../vendor/bootstrap4-alpha6/scss/forms";
 @import "../vendor/bootstrap4-alpha6/scss/buttons";
 
 // Components
@@ -50,15 +50,15 @@
 @import "../vendor/bootstrap4-alpha6/scss/dropdown";
 @import "../vendor/bootstrap4-alpha6/scss/button-group";
 @import "../vendor/bootstrap4-alpha6/scss/input-group";
-@import "../vendor/bootstrap4-alpha6/scss/custom-forms";
+//@import "../vendor/bootstrap4-alpha6/scss/custom-forms";
 @import "../vendor/bootstrap4-alpha6/scss/nav";
 @import "../vendor/bootstrap4-alpha6/scss/navbar";
 @import "../vendor/bootstrap4-alpha6/scss/card";
-@import "../vendor/bootstrap4-alpha6/scss/breadcrumb";
-@import "../vendor/bootstrap4-alpha6/scss/pagination";
-@import "../vendor/bootstrap4-alpha6/scss/badge";
-@import "../vendor/bootstrap4-alpha6/scss/jumbotron";
-@import "../vendor/bootstrap4-alpha6/scss/alert";
+//@import "../vendor/bootstrap4-alpha6/scss/breadcrumb";
+//@import "../vendor/bootstrap4-alpha6/scss/pagination";
+//@import "../vendor/bootstrap4-alpha6/scss/badge";
+//@import "../vendor/bootstrap4-alpha6/scss/jumbotron";
+//@import "../vendor/bootstrap4-alpha6/scss/alert";
 @import "../vendor/bootstrap4-alpha6/scss/progress";
 @import "../vendor/bootstrap4-alpha6/scss/media";
 @import "../vendor/bootstrap4-alpha6/scss/list-group";
@@ -67,9 +67,9 @@
 
 // Components w/ JavaScript
 @import "../vendor/bootstrap4-alpha6/scss/modal";
-@import "../vendor/bootstrap4-alpha6/scss/tooltip";
+//@import "../vendor/bootstrap4-alpha6/scss/tooltip";
 @import "../vendor/bootstrap4-alpha6/scss/popover";
-@import "../vendor/bootstrap4-alpha6/scss/carousel";
+//@import "../vendor/bootstrap4-alpha6/scss/carousel";
 
 // Utility classes
 @import "../vendor/bootstrap4-alpha6/scss/utilities";
@@ -81,3 +81,4 @@
    -------------------------------------------------------- */
 
 @import "custom";
+//@import "../vendor/animate";
