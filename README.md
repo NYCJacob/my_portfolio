@@ -1,1 +1,1 @@
-* based on this Bootstrap 4 template https://www.bootstrapzero.com/bootstrap-template/whats-new-in-bootstrap-4-theme
+* using https://github.com/afeld/jsonpanel
